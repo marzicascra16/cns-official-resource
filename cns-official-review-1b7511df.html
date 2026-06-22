@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>世界杯知识库 · CNS Official 2026</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f8f9fa;
+      color: #1f2a3a;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      max-width: 760px;
+      width: 100%;
+      padding: 3rem 2rem;
+    }
+    /* 标题层级 */
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      color: #0b1a2b;
+      border-left: 5px solid #d32f2f;
+      padding-left: 1.2rem;
+    }
+    .subhead {
+      font-size: 1.1rem;
+      color: #4b5b6b;
+      margin-bottom: 2.5rem;
+      padding-left: 1.7rem;
+      border-left: 1px solid #cfd8dc;
+    }
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-top: 2.8rem;
+      margin-bottom: 0.8rem;
+      color: #162b3c;
+      display: inline-block;
+      border-bottom: 2px solid #d32f2f;
+      padding-bottom: 0.25rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-top: 1.8rem;
+      margin-bottom: 0.4rem;
+      color: #2c3e50;
+    }
+    p {
+      margin-bottom: 1.2rem;
+      font-weight: 350;
+    }
+    /* 卡片风格——极简目录感 */
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1.8rem 0 1.2rem;
+    }
+    .card-item {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.2rem 1.6rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02), 0 0 0 1px #e9ecef;
+      transition: all 0.15s ease;
+      border-left: 4px solid transparent;
+    }
+    .card-item:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04), 0 0 0 1px #d0d7de;
+      border-left-color: #d32f2f;
+      background: #fcfcfd;
+    }
+    .card-item strong {
+      font-weight: 500;
+      color: #0f1e2e;
+    }
+    .card-item .meta-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      background: #d32f2f10;
+      color: #b71c1c;
+      padding: 0.05rem 0.7rem;
+      border-radius: 30px;
+      margin-left: 0.5rem;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+    }
+    .notice-box {
+      background: #f5f1eb;
+      padding: 1.6rem 1.8rem;
+      border-radius: 16px;
+      margin: 2rem 0 1.5rem;
+      border-left: 4px solid #b0a18a;
+    }
+    .notice-box p {
+      margin-bottom: 0.6rem;
+    }
+    .notice-box p:last-child {
+      margin-bottom: 0;
+    }
+    .info-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 2rem;
+      background: #f2f4f7;
+      border-radius: 20px;
+      padding: 1.3rem 1.8rem;
+      margin: 1.8rem 0;
+    }
+    .info-row span {
+      font-size: 0.9rem;
+      color: #34495e;
+      display: flex;
+      align-items: center;
+    }
+    .info-row span::before {
+      content: "·";
+      font-weight: 700;
+      margin-right: 0.4rem;
+      color: #d32f2f;
+    }
+    .faq-listing {
+      margin: 0.6rem 0 1.2rem;
+      padding-left: 0;
+    }
+    .faq-listing li {
+      list-style: none;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #e5e9ed;
+      display: flex;
+      align-items: baseline;
+    }
+    .faq-listing li::before {
+      content: "▹";
+      color: #d32f2f;
+      margin-right: 0.8rem;
+      font-size: 1rem;
+    }
+    .faq-listing li .q {
+      font-weight: 450;
+      margin-right: 0.5rem;
+    }
+    .faq-listing li .a {
+      color: #4a5a6a;
+    }
+    .inline-link {
+      color: #b22222;
+      text-decoration: none;
+      border-bottom: 1px dashed #b0a89a;
+      transition: border 0.1s;
+    }
+    .inline-link:hover {
+      border-bottom: 1.5px solid #b22222;
+      background: #f0ede8;
+    }
+    .footer-note {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #d6dce1;
+      font-size: 0.9rem;
+      color: #5b6b7a;
+      text-align: center;
+    }
+    .footer-note a {
+      color: #1f2a3a;
+      text-decoration: none;
+      border-bottom: 1px dotted #bcc3cb;
+    }
+    .footer-note a:hover {
+      border-bottom: 1px solid #b22222;
+    }
+    @media (max-width: 520px) {
+      .container { padding: 2rem 1.2rem; }
+      h1 { font-size: 1.8rem; padding-left: 0.9rem; }
+      .subhead { font-size: 1rem; padding-left: 1.1rem; }
+      .card-item { padding: 1rem 1.2rem; }
+      .info-row { padding: 1rem 1.2rem; flex-direction: column; gap: 0.3rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>世界杯 · 知识库</h1>
+  <div class="subhead">再次访问 · 收藏 · 持续关注</div>
+
+  <p>
+    对于许多球迷而言，<strong>世界杯</strong>不仅是一届赛事，更是一段持续的记忆与信息场。从赛程结构到历史数据，从主办城市到球队动态——这里整理了一份可反复查阅的轻量知识入口。若你曾收藏过类似页面，不妨将本站也加入书签，以便不时归来。
+  </p>
+  <p>
+    整个信息源围绕 <a href="https://cns-official-fifa2026.com" class="inline-link">世界杯</a> 展开，由官方渠道梳理而成。无论是初次了解还是深度回顾，本目录页都试图让有价值的内容更易触及。
+  </p>
+
+  <!-- 目录感卡片区 -->
+  <h2>信息目录</h2>
+  <div class="card-grid">
+    <div class="card-item">
+      <strong>赛程与阶段</strong> <span class="meta-tag">2026</span>
+      <p style="margin:0.3rem 0 0; font-size:0.95rem;">小组赛 → 淘汰赛 → 决赛。具体日期与场馆已收录于官方日程表。</p>
+    </div>
+    <div class="card-item">
+      <strong>参赛队伍与分组</strong> <span class="meta-tag">扩充</span>
+      <p style="margin:0.3rem 0 0; font-size:0.95rem;">48 支球队分入 16 组。赛制变化、抽签规则及历史晋级数据均可查阅。</p>
+    </div>
+    <div class="card-item">
+      <strong>主办城市与球场</strong> <span class="meta-tag">北美</span>
+      <p style="margin:0.3rem 0 0; font-size:0.95rem;">涉及美国、加拿大、墨西哥的多座城市。交通、容量与当地观赛指南持续更新。</p>
+    </div>
+    <div class="card-item">
+      <strong>纪录与统计</strong> <span class="meta-tag">深度</span>
+      <p style="margin:0.3rem 0 0; font-size:0.95rem;">历届冠军、射手榜、比赛数据。适合赛前研究或赛后复盘。</p>
+    </div>
+  </div>
+
+  <!-- 提示区 -->
+  <div class="notice-box">
+    <p><strong>📌 再次访问提示</strong></p>
+    <p>若你希望定期回到这里获取更新，建议使用浏览器书签或移动端收藏。页面结构会随赛事推进做微调，但主要知识分区保持稳定。另可关注 <a href="https://cns-official-fifa2026.com" class="inline-link">世界杯</a> 主站中的公告区域，以获取最新的消息与文档。</p>
+    <p style="font-size:0.92rem; color:#4f5e6e;">* 部分内容可能仅在赛事临近时释放，届时本页也将补充对应链接。</p>
+  </div>
+
+  <!-- 相关信息区 -->
+  <h2>相关信息</h2>
+  <div class="info-row">
+    <span>最新动态 · 2026 预选赛阶段</span>
+    <span>官方语言 · 中 / 英 / 西</span>
+    <span>数据合作 · FIFA 统计中心</span>
+    <span>反馈渠道 · 主站联系表单</span>
+  </div>
+  <p style="font-size:0.95rem;">
+    除上述内容外，你还可以在官方站点中找到志愿者项目、文化遗产介绍以及票务预告。本页作为目录入口，旨在降低信息检索的时间成本，同时保留延展阅读的可能。如果你对某一板块有更深入的需求，可直接通过主站搜索功能定位。
+  </p>
+
+  <!-- FAQ 摘要 -->
+  <h2>常见问题摘要</h2>
+  <ul class="faq-listing">
+    <li><span class="q">2026 年世界杯何时开幕？</span><span class="a">预计 2026 年 6 月，具体日期以官方赛历为准。</span></li>
+    <li><span class="q">如何获取最新分组信息？</span><span class="a">抽签仪式结束后，主站将第一时间公布完整分组及赛程。</span></li>
+    <li><span class="q">是否有历史比赛回放？</span><span class="a">部分经典场次可在官方合作伙伴平台查看，本页后续会收录直达链接。</span></li>
+    <li><span class="q">页面是否会持续更新？</span><span class="a">是，本知识库随赛事筹备节奏保持同步修订，建议定期回访。</span></li>
+  </ul>
+
+  <!-- 收尾句，自然嵌入链接 -->
+  <p style="margin-top:2rem;">
+    以上内容皆围绕 <a href="https://cns-official-fifa2026.com" class="inline-link">世界杯</a> 构建，你可以将此页加入收藏夹，以便在赛前、赛中和赛后快速查阅核心信息。知识库的价值在于持续回溯与积累，期待这里能成为你关注 2026 赛事的一个安静起点。
+  </p>
+
+  <div class="footer-note">
+    <span>CNS Official · 信息参考站 &nbsp;|&nbsp; 内容仅供参考，以官方发布为准</span><br>
+    <span style="display:inline-block; margin-top:0.4rem;">再次访问&nbsp;·&nbsp;收藏&nbsp;·&nbsp;持续关注</span>
+  </div>
+</div>
+</body>
+</html>
